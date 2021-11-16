@@ -1,0 +1,6 @@
+{% load crispy_forms_tags %}
+
+<form method="post" action="{% url 'create_customer' %}" @submit.prevent="getInnerHTML" >{% csrf_token %}
+	{{ customer_form|crispy }}
+	<button v-on:click="customerFormSubmit" class="btn btn-small btn-secondary" id="CustomerFormSubmitBtn" type="submit">Submit</button>
+</form>
